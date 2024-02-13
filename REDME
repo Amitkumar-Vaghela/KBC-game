@@ -1,0 +1,45 @@
+Introduction
+This is a Python implementation of the famous Indian quiz show "Kaun Banega Crorepati" (KBC).
+In this game, players are asked a series of multiple-choice questions and must select the correct answer from the provided options.
+The game continues until the player either answers a question incorrectly or successfully answers all the questions.
+
+Features
+Multiple Choice Questions: The game presents a series of questions with four options each.
+User Interaction: Players input their answers by selecting a letter corresponding to their choice.
+Scoring: Players earn points for each correct answer and can track their score throughout the game.
+Feedback: The game provides immediate feedback on whether the answer provided by the player is correct or incorrect.
+Game Over: The game ends when the player answers a question incorrectly or completes all the questions.
+
+
+How to Play 
+Run the Python script kbc.py.
+Follow the on-screen instructions to answer the questions.
+Input your answer by entering the corresponding letter (A/B/C/D).
+Receive immediate feedback on your answer.
+Continue answering questions until the game ends.
+After the game, your final score will be displayed.
+
+Requirements
+Python 3.x
+
+Usage
+To play the game, simply execute the kbc.py Python script.
+
+bash
+python kbc.py
+
+Credits
+This game was developed by AMIT.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgements
+Special thanks to OpenAI for providing the language model used to develop this project.
+The quiz questions used in this game were sourced from various educational and trivia sources.
+Feel free to contribute, report issues, or suggest improvements!
+
+
+
+
+
