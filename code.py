@@ -46,6 +46,14 @@ questions_answers  = [
      "choice4"  : "Hermione Granger",     
      "correct"  : "Professor Flitwick"
   }
+  {
+    "question"  : "current railway minister of the  india?",
+     "choice1"  : "Mamata banarjee",
+     "choice2"  : "Ram vilash",
+     "choice3"  : "piyus gohel",
+     "choice4"  : "Ashvini vaishnaw",     
+     "correct"  : "Ashvini vaishnaw"
+  }
 ]
 score = 0
 
