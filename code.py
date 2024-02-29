@@ -1,40 +1,68 @@
-import random
+# KBC Game with AMIT Vaghela
+print("Welcome to Kaun Banega Crorepati!\n")
 
-# Define questions and answers
-questions = {
-    "What is the capital of India?": ["A. Mumbai", "B. New Delhi", "C. Kolkata", "D. Chennai", "B"],
-    "Which planet is known as the Red Planet?": ["A. Venus", "B. Mars", "C. Jupiter", "D. Saturn", "B"],
-    "Who wrote 'To Kill a Mockingbird'?": ["A. Harper Lee", "B. J.K. Rowling", "C. Stephen King", "D. George Orwell", "A"],
-    "What is the chemical symbol for water?": ["A. H2O", "B. CO2", "C. O2", "D. CH4", "A"],
-    "Which is the longest river in the world?": ["A. Nile", "B. Amazon", "C. Yangtze", "D. Mississippi", "A"],
-    "Which country is known as the 'Land of the Rising Sun'?": ["A. China", "B. Japan", "C. South Korea", "D. Thailand", "B"],
-    "Who painted the Mona Lisa?": ["A. Leonardo da Vinci", "B. Vincent van Gogh", "C. Pablo Picasso", "D. Claude Monet", "A"],
-    "What is the largest mammal in the world?": ["A. Elephant", "B. Blue Whale", "C. Giraffe", "D. Hippopotamus", "B"],
-    "What is the capital of Australia?": ["A. Sydney", "B. Melbourne", "C. Canberra", "D. Brisbane", "C"],
-    "Which gas do plants primarily use for photosynthesis?": ["A. Oxygen", "B. Carbon Dioxide", "C. Nitrogen", "D. Hydrogen", "B"]  
-}
+questions_answers  = [
+  {
+    "question"  : "What is the name of Draco Malfoy's son?",
+     "choice1"  : "Scorpius",
+     "choice2"  : "Lucius",
+     "choice3"  : "Diego",
+     "choice4"  : "Severus",     
+     "correct"  : "Scorpius"
+  },
+  
+  {
+    "question"  : "What creature does Dumbledore have as a pet?",
+     "choice1"  : "Efreet",
+     "choice2"  : "Fey",
+     "choice3"  : "Troll",
+     "choice4"  : "Basilisk",     
+     "correct"  : "Basilisk"
+  },
+  
+  {
+    "question"  : "What is Voldemort's final horcrux?",
+     "choice1"  : "A mirror",
+     "choice2"  : "A snake",
+     "choice3"  : "A brooch",
+     "choice4"  : "Harry Potter",     
+     "correct"  : "A snake"
+  },
+  
+  {
+    "question"  : "Who takes over as headmaster of Hogwarts after Dumbledore's death?",
+     "choice1"  : "Voldemort",
+     "choice2"  : "Narcissa Black",
+     "choice3"  : "Professor Trelawny",
+     "choice4"  : "Professor Snape",                    
+     "correct"  : "Professor Snape"
+  },
+  
+  {
+    "question"  : "Who killed Deatheater Antonin Dolohov during the Battle of Hogwarts?",
+     "choice1"  : "Professor Flitwick",
+     "choice2"  : "Ron Weasley",
+     "choice3"  : "Falling Debris",
+     "choice4"  : "Hermione Granger",     
+     "correct"  : "Professor Flitwick"
+  }
+]
+score = 0
 
-def kbc():
-    score = 0
-    for question in questions:
-        print(question)
-        for option in questions[question][:4]:
-            print(option)
-        answer = input("Enter your answer (A/B/C/D): ").upper()
-        if answer == questions[question][4]:
-            print("Correct!")
+for item in questions_answers:
+        print("\n", item["question"])
+        print("Option A:\t" + item["choice1"])
+        print("Option B:\t" + item["choice2"])
+        print("Option C:\t" + item["choice3"])
+        print("Option D:\t" + item["choice4"])
+        user_choice  = input("Please type the correct answer:\n>>>>>\t")
+        if user_choice.title() in item["correct"]:
+            print("Correct answer!")
             score += 1
         else:
-            print("Wrong!")
-            break
-    print("You scored {} out of {}.".format(score, len(questions)))
+            print("Wrong answer!")
+            print("Correct answer is : " + item["correct"])
 
-# Main function to run the game
-def main():
-    print("Welcome to Kaun Banega Crorepati (KBC)!")
-    print("Answer the following questions to win.")
-    kbc()
-    print("Thank you for playing!")
-
-if __name__ == "__main__":
-    main()
+print("Your score is: " + str(score))
+print("You won Rs", 1000*(2**score)) # money gets doubled at each correct answer
+print("Thanks for playing!")
